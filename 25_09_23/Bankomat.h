@@ -1,5 +1,4 @@
 #include <string>;
-using namespace std;
 
 class Bankomat
 {
@@ -19,6 +18,6 @@ public:
     void withdraw();
     void deposit();
     void print();
-    string toString();
+    std::string toString();
 };
 

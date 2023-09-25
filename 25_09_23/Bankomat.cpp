@@ -168,12 +168,23 @@ void Bankomat::deposit()
 
 string Bankomat::toString()
 {
-    return to_string(total);
+    string result;
+    int num = total;
+
+    if (num == 0) {
+        result = "0";
+    }
+    while (num > 0) {
+        char digit = '0' + (num % 10);
+        result = digit + result;
+        num /= 10;
+    }
+    return result;
 }
 
 void Bankomat::print()
 {
-    cout << "Available balance: " << total << endl;
+    cout << "Available balance: " << toString() << endl;
     bool first = true;
     if (am1000 > 0)
     {
