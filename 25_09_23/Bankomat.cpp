@@ -201,6 +201,7 @@ void Bankomat::print()
     cout << ")" << endl;
     cout << "Minimum withdraw amount: " << min << endl;
     cout << "Maximum withdraw amount: " << max << endl;
+    cout << "ID: " << id << endl;
 
 }
 
